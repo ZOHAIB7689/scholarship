@@ -24,18 +24,18 @@ const HomePage = () => {
                 {/* Features Section */}
                 <section className="py-20 bg-white">
                     <div className="container mx-auto px-4 text-center">
-                        <h2 className="text-4xl font-bold mb-12">Why Choose Us?</h2>
+                        <h2 className="text-4xl font-bold text-amber-950 mb-12">Why Choose Us?</h2>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
                             <div className="feature-card">
-                                <h3 className="text-2xl font-semibold mb-4">Curated Opportunities</h3>
+                                <h3 className="text-2xl font-semibold mb-4 text-teal-800">Curated Opportunities</h3>
                                 <p className="text-gray-600">We provide a curated list of high-quality scholarships, saving you time and effort in your search.</p>
                             </div>
                             <div className="feature-card">
-                                <h3 className="text-2xl font-semibold mb-4">Simplified Applications</h3>
+                                <h3 className="text-2xl font-semibold mb-4 text-teal-800">Simplified Applications</h3>
                                 <p className="text-gray-600">Our streamlined application process makes it easy to apply for multiple scholarships with minimal hassle.</p>
                             </div>
                             <div className="feature-card">
-                                <h3 className="text-2xl font-semibold mb-4">Expert Guidance</h3>
+                                <h3 className="text-2xl font-semibold mb-4 text-teal-800">Expert Guidance</h3>
                                 <p className="text-gray-600">We offer resources and support to help you craft the perfect application and stand out from the crowd.</p>
                             </div>
                         </div>
