@@ -6,7 +6,7 @@ const Header = () => {
             <div className="container mx-auto px-4 py-4 flex justify-between items-center">
                 <div className="text-2xl font-bold">
                     <Link href="/" className="hover:text-gray-300">
-                        Scholarship Finder
+                        <img src="/images/ninss_logo.png" alt="Nightingale Institute of Nursing" className="h-10" />
                     </Link>
                 </div>
                 <nav>
