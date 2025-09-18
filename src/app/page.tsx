@@ -7,7 +7,7 @@ const programs = [
     title: "BS Nursing",
     duration: "4 years",
     desc: "Comprehensive BSN program with clinical rotations, affiliated with LUMHS Jamshoro.",
-    image: "https://images.unsplash.com/photo-1519494080410-f9aa8f52f274?auto=format&fit=crop&w=600&q=80",
+    image: "/images/nurse.jpg",
   },
   {
     title: "LHV (Lady Health Visitor)",
@@ -19,7 +19,7 @@ const programs = [
     title: "CMW (Community Midwifery)",
     duration: "2 years",
     desc: "Hands-on midwifery training with hospital & community clinical placements.",
-    image: "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80",
+    image: "/images/visitor.jpg",
   },
   {
     title: "Cert. Nursing Assistant (CNA)",
@@ -147,8 +147,17 @@ export default function HomePage() {
           </section>
 
           {/* Mission & Vision */}
-          <section className="py-16 bg-gray-50">
-            <div className="container mx-auto px-4 text-center max-w-3xl">
+          <section
+            className="py-16 bg-gray-50 relative"
+            style={{
+              backgroundImage: "url('/images/ayaz.jpg')",
+              backgroundSize: "",
+              backgroundPosition: "center",
+            }}
+          >
+            <div className="absolute inset-0 bg-white/70"></div>  
+            
+            <div className="container mx-auto px-4 text-center max-w-3xl relative">
               <h2 className="text-3xl font-bold mb-6 text-gray-900">Mission & Vision</h2>
               <p className="text-gray-700 leading-relaxed mb-4">
                 Mission: The mission of Nightingale Institute Of Nursing Sanghar Sindh (NINSS) is to foster excellence in nursing professional/health professional education, to educate the student of Nursing profession in accordance with highest professional standards and ethical values and to meet the health care needs of community through dissemination of knowledge and service.
