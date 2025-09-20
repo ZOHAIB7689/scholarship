@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { addApplication } from "@/lib/db";
 export async function POST(req: Request) {
+  console.log("DB URL:", process.env.DATABASE_URL);
+
   try {
     const { name, email, program } = await req.json();
 
