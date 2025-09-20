@@ -1,33 +1,18 @@
 import { NextResponse } from "next/server";
-import { addApplication } from "../../../lib/applications";
-
+import { addApplication } from "@/lib/db";
 export async function POST(req: Request) {
   try {
-    const body = await req.json();
+    const { name, email, program } = await req.json();
 
-    // validation
-    if (!body.name || !body.email || !body.program) {
-      return NextResponse.json(
-        { error: "Missing required fields" },
-        { status: 400 }
-      );
+    if (!name || !email || !program) {
+      return NextResponse.json({ error: "All fields are required" }, { status: 400 });
     }
 
-    const application = {
-      id: crypto.randomUUID(),
-      name: body.name,
-      email: body.email,
-      program: body.program,
-      createdAt: new Date().toISOString(),
-    };
+    await addApplication(name, email, program);
 
-    await addApplication(application);
-
-    return NextResponse.json(
-      { message: "Your application has been submitted successfully. Our admissions team will review it and contact you shortly", application },
-      { status: 201 }
-    );
+    return NextResponse.json({ success: true, message: "Application submitted successfully. Our admin will contact you soon." });
   } catch (error) {
-    return NextResponse.json({ error: "Server error" }, { status: 500 });
+    console.error("Error saving application:", error);
+    return NextResponse.json({ error: "Failed to submit application" }, { status: 500 });
   }
 }
