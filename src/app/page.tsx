@@ -192,15 +192,6 @@ export default function HomePage() {
               </div>
             </div>
           </section>
-
-          {/* Footer */}
-          <footer className="bg-gray-800 text-gray-200 py-8">
-            <div className="container mx-auto px-4 text-center">
-              <p className="text-sm">© {new Date().getFullYear()} Nightingale Institute of Nursing — All Rights Reserved.</p>
-              <p className="text-xs mt-2">Recognized by Pakistan Nursing Council • Affiliated with LUMHS Jamshoro</p>
-            </div>
-          </footer>
-
         </main>
       </div>
     </>
