@@ -5,8 +5,15 @@ import Link from "next/link";
 import { getPrograms } from "../../lib/data";
 import type { Program } from "../../lib/data";
 
+type ProgramWithDetails = Program & {
+  title: string;
+  category: string;
+  description?: string;
+  imageUrl?: string;
+};
+
 const ProgramsPage = () => {
-  const [programs, setPrograms] = useState<Program[]>([]);
+  const [programs, setPrograms] = useState<ProgramWithDetails[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -14,7 +21,16 @@ const ProgramsPage = () => {
     const fetchPrograms = async () => {
       try {
         const data = await getPrograms();
-        setPrograms(data);
+        // Normalize Program to ProgramWithDetails by ensuring title and category exist.
+        // Use existing properties if available (e.g. name/type) or sensible defaults.
+        const normalized: ProgramWithDetails[] = data.map((p) => ({
+          ...p,
+          title: (p as any).title ?? (p as any).name ?? "Untitled Program",
+          category: (p as any).category ?? (p as any).type ?? "General",
+          description: (p as any).description,
+          imageUrl: (p as any).imageUrl,
+        }));
+        setPrograms(normalized);
       } catch (err) {
         setError("Failed to fetch programs.");
       } finally {
