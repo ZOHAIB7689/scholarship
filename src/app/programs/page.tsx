@@ -49,7 +49,7 @@ const ProgramsPage = () => {
       {/* HERO SECTION */}
       <section className="relative bg-gradient-to-r from-blue-700 via-indigo-700 to-purple-700 text-white py-24 px-6 text-center">
         <div className="max-w-3xl mx-auto">
-          <h1 className="text-5xl font-extrabold mb-6 drop-shadow-lg">
+          <h1 className="text-5xl font-extrabold text-black mb-6 drop-shadow-lg">
             Explore Our Programs
           </h1>
           <p className="text-lg md:text-xl text-gray-200">
