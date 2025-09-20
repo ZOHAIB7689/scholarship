@@ -102,8 +102,8 @@ export default function HomePage() {
                   Explore Programs
                 </Link>
 
-                <Link href="/admissions" className="border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-semibold px-6 py-3 rounded-lg transition transform hover:scale-105 duration-300">
-                  Apply Now
+                <Link href="/applyit" className="border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-semibold px-6 py-3 rounded-lg transition transform hover:scale-105 duration-300">
+                  Apply for Scholarship
                 </Link>
               </div>
 
